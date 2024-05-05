@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "52a27836-fcf5-4fa9-b4a7-3e49feef7389",
+		"name": "Vendor Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26780115",
+		"_collection_link": "https://www.postman.com/mohamedsameerm/workspace/sameer-api-collections/collection/26780115-52a27836-fcf5-4fa9-b4a7-3e49feef7389?action=share&source=collection_link&creator=26780115"
+	},
+	"item": [
+		{
+			"name": "Create Vendor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Sameer\",\n    \"contact_details\": \"1234567890\",\n    \"address\": \"Vendor Address\",\n    \"city\": \"coimbatore\",\n    \"state\": \"TamilNadu\",\n    \"pincode\": \"629161\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of Vendors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/list/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor Detais",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/detail/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						"detail",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Vendor Details",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"New sam\"}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/update/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						"update",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Vendor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/delete/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						"delete",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Purchase Order ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"po_number\": \"PO123\",\n    \"vendor\": 2,\n    \"order_date\": \"2024-05-01T10:00:00\",\n    \"delivery_date\": \"2024-05-10T10:00:00\",\n    \"items\": [\"Item1\", \"Item2\"],\n    \"quantity\": 10,\n    \"status\": \"Pending\",\n    \"quality_rating\": null,\n    \"issue_date\": \"2024-05-01T10:00:00\",\n    \"acknowledgment_date\": null\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_order/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_order",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of Purchase Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_order/list/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_order",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase Order detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_order/detail/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_order",
+						"detail",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Purchase Order",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"po_number\": \"PO456\",\n    \"vendor\": 2,\n    \"order_date\": \"2024-05-02T10:00:00\",\n    \"delivery_date\": \"2024-05-12T10:00:00\",\n    \"items\": [\"Item1\", \"Item2\", \"Item3\"],\n    \"quantity\": 20,\n    \"status\": \"In Progress\",\n    \"quality_rating\": 4.5,\n    \"issue_date\": \"2024-05-02T10:00:00\",\n    \"acknowledgment_date\": \"2024-05-05T10:00:00\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_order/update/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_order",
+						"update",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Purchase Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_order/delete/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_order",
+						"delete",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Performance of Vendor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/performance/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						"performance",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
